@@ -11,3 +11,16 @@ document.getElementById("nyom").addEventListener("click",()=>{
     console.log("az")
     console.log(numbers)
 })
+
+document.getElementById("min").addEventListener("click",()=>{
+    let min=99999;
+    numbers.forEach(element => {
+        if(element<min){
+            min=element
+        }
+        
+    });
+    let h1=document.getElementById("minhely");
+    h1.textContent="A legkissebb érték a listában :" + min
+
+})
