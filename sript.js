@@ -8,19 +8,22 @@ document.getElementById("nyom").addEventListener("click",()=>{
     let ellem=document.createElement("li")
     ellem.textContent=hozzaadando + ",";
     let list=document.getElementById("ul").appendChild(ellem)
-    console.log("az")
-    console.log(numbers)
+   
+   
 })
 
-document.getElementById("min").addEventListener("click",()=>{
-    let min=99999;
-    numbers.forEach(element => {
-        if(element<min){
-            min=element
+document.getElementById("max").addEventListener("click",()=>{
+    let max=0;
+    for(let i=0;i<numbers.length;i++){
+        if(max<numbers[i]){
+            max=numbers[i]
+            
+
         }
         
-    });
-    let h1=document.getElementById("minhely");
-    h1.textContent="A legkissebb érték a listában :" + min
+    }
+    
+    let h1=document.getElementById("maxhely");
+    h1.textContent="A legnagyobb  érték a listában :" + max
 
 })
